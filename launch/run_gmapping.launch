@@ -1,0 +1,21 @@
+<launch>
+  <node pkg="gmapping" name="slam_gmapping" type="slam_gmapping" output="screen" >
+    <param name="base_frame" value="base_link" />
+    <param name="odom_frame" value="odom" />
+
+    <param name="maxUrange" value="4.0" />
+    <param name="maxRange" value="4.0" />
+
+    <param name="srr" value="0.3" />	<!-- 直進1mあたりの直進方向の誤差[m] -->
+    <param name="srt" value="0.1" />	<!-- 回転1radあたりの直進方向の誤差[m] -->
+    <param name="str" value="0.1" />	<!-- 直進1mあたりの回転方向の誤差[rad] -->
+    <param name="stt" value="0.3" />	<!-- 回転1radあたりの回転方向の誤差[rad] -->
+
+    <param name="xmax" value="50" />
+    <param name="ymax" value="50" />
+    <param name="xmin" value="-50" />
+    <param name="ymin" value="-50" />
+
+    <param name="particles" value="100" />
+  </node>
+</launch>
