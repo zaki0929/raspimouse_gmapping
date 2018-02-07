@@ -2,13 +2,12 @@
   <master auto="start"/>
 
   <!-- Run Rviz -->
-  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find raspimouse_hector_slam)/config/rviz_config.rviz"/>
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find raspimouse_gmapping)/config/rviz_config.rviz"/>
 
   <!-- Run Move Base -->
   <include file="$(find raspimouse_navigation_2)/launch/run_move_base.launch"/>
 
-  <!-- Run Hector SLAM -->
-  <include file="$(find hector_geotiff)/launch/geotiff_mapper.launch"/>
-  <include file="$(find raspimouse_hector_slam)/launch/run_hector_mapping.launch"/>
+  <!-- Run Gmapping -->
+  <include file="$(find raspimouse_gmapping)/launch/run_gmapping.launch"/>
 
 </launch>
